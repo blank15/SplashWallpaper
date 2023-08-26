@@ -1,0 +1,52 @@
+[versions]
+minSdk = "25"
+targetSdk = "33"
+compileSdk = "33"
+versioNCode = "1"
+versionName = "1.0.0"
+kotlin = "1.8.10"
+app = "8.1.0"
+core = "1.9.0"
+lifecycle = "2.6.1"
+activityCompose = "1.7.2"
+bom = "2023.03.00"
+junit = "4.13.2"
+junit-ext = "1.1.5"
+espresso = "3.5.1"
+espresso-core = "3.5.1"
+appcompat = "1.6.1"
+material = "1.9.0"
+
+[libraries]
+core-ktx = {group = "androidx.core",name = "core-ktx",version.ref = "core"}
+lifecycler = {group = "androidx.lifecycle", name = "lifecycle-runtime-ktx",version.ref = "lifecycle"}
+activity = {group = "androidx.activity", name = "activity-compose",version.ref = "activityCompose"}
+
+compose-bom = {group = "androidx.compose",name = "compose-bom",version.ref = "bom"}
+compose-ui = {group = "androidx.compose.ui",name ="ui"}
+compose-graphics = {group = "androidx.compose.ui", name = "ui-graphics"}
+compose-preview = {group = "androidx.compose.ui", name = "ui-tooling-preview"}
+compose-material3 = {group = "androidx.compose.material3", name = "material3"}
+compose-ui-tooling = {group = "androidx.compose.ui", name = "ui-tooling"}
+compose-ui-testing = {group = "androidx.compose.ui", name = "ui-test-junit4"}
+compose-ui-test-manifest = {group = "androidx.compose.ui",name = "ui-test-manifest"}
+
+junit = {group = "junit", name = "junit",version.ref = "junit"}
+junit-ext = {group = "androidx.test.ext",name ="junit",version.ref ="junit-ext"}
+espresso = {group = "androidx.test.espresso", name = "espresso:espresso-core", version.ref = "espresso"}
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+[bundles]
+compose = [
+    "compose-ui",
+    "compose-graphics",
+    "compose-preview",
+    "compose-material3"
+]
+
+
+[plugins]
+kotlin = {id = "org.jetbrains.kotlin.android",version.ref = "kotlin"}
+application = {id = "com.android.application",version.ref = "app"}
+library = {id = "com.android.library", version.ref = "app"}
