@@ -1,12 +1,13 @@
 [versions]
-minSdk = "25"
+minSdk = "26"
 targetSdk = "33"
 compileSdk = "33"
 versioNCode = "1"
 versionName = "1.0.0"
-kotlin = "1.8.10"
+kotlin = "1.9.0"
 app = "8.1.0"
 core = "1.9.0"
+androidxComposeCompiler = "1.5.0"
 lifecycle = "2.6.1"
 activityCompose = "1.7.2"
 bom = "2023.03.00"
@@ -16,11 +17,16 @@ espresso = "3.5.1"
 espresso-core = "3.5.1"
 appcompat = "1.6.1"
 material = "1.9.0"
+navigation = "2.6.0"
+kotlinxCoroutines = "1.6.4"
 
 [libraries]
 core-ktx = {group = "androidx.core",name = "core-ktx",version.ref = "core"}
 lifecycler = {group = "androidx.lifecycle", name = "lifecycle-runtime-ktx",version.ref = "lifecycle"}
 activity = {group = "androidx.activity", name = "activity-compose",version.ref = "activityCompose"}
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-guava = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-guava", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
 
 compose-bom = {group = "androidx.compose",name = "compose-bom",version.ref = "bom"}
 compose-ui = {group = "androidx.compose.ui",name ="ui"}
@@ -30,6 +36,7 @@ compose-material3 = {group = "androidx.compose.material3", name = "material3"}
 compose-ui-tooling = {group = "androidx.compose.ui", name = "ui-tooling"}
 compose-ui-testing = {group = "androidx.compose.ui", name = "ui-test-junit4"}
 compose-ui-test-manifest = {group = "androidx.compose.ui",name = "ui-test-manifest"}
+compose-navigation = {group = "androidx.navigation", name = "navigation-compose",version.ref = "navigation"}
 
 junit = {group = "junit", name = "junit",version.ref = "junit"}
 junit-ext = {group = "androidx.test.ext",name ="junit",version.ref ="junit-ext"}
@@ -37,6 +44,11 @@ espresso = {group = "androidx.test.espresso", name = "espresso:espresso-core", v
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "app" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+
+
 [bundles]
 compose = [
     "compose-ui",

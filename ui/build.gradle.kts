@@ -4,13 +4,17 @@ plugins {
 }
 
 android {
-    namespace = "com.blank.designsystem"
+    namespace = "com.blank.ui"
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 }
 
 dependencies {
-    api(libs.core.ktx)
+
+    implementation(libs.core.ktx)
     api(libs.bundles.compose)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.junit.ext)
+    androidTestImplementation(libs.espresso.core)
 }

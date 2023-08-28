@@ -7,6 +7,14 @@ pluginManagement {
     }
 }
 
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 rootProject.name = "wallpaper"
 include(":app")
 include(":data")
@@ -16,4 +24,4 @@ include(":designsystem")
 include(":feature:home")
 include(":feature:about")
 include(":feature:collection")
-include(":build-logic:convention")
+include(":ui")
