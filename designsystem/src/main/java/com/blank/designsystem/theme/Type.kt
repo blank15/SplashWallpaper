@@ -1,4 +1,4 @@
-package com.blank.wallpaper.ui.theme
+package com.blank.designsystem.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

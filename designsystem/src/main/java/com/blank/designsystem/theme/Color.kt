@@ -1,4 +1,4 @@
-package com.blank.wallpaper.ui.theme
+package com.blank.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

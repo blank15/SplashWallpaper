@@ -14,8 +14,6 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
 
 
             dependencies {
-
-                add("implementation", project(":core"))
                 add("implementation", project(":designsystem"))
                 add("implementation", project(":ui"))
                 add("implementation", project(":data"))
@@ -23,7 +21,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
 
                 add("testImplementation", kotlin("test"))
                 add("androidTestImplementation", kotlin("test"))
-
+                add("implementation",libs.findLibrary("compose-navigation").get())
                 add("implementation", libs.findLibrary("kotlinx.coroutines.android").get())
             }
         }
