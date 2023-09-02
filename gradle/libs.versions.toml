@@ -19,27 +19,34 @@ appcompat = "1.6.1"
 material = "1.9.0"
 navigation = "2.6.0"
 kotlinxCoroutines = "1.6.4"
-
+hilt = "2.47"
+hiltExt = "1.0.0"
+androidxHiltNavigationCompose = "1.0.0"
+ksp = "1.9.0-1.0.13"
 coil = "2.2.2"
 
 [libraries]
-core-ktx = {group = "androidx.core",name = "core-ktx",version.ref = "core"}
-lifecycler = {group = "androidx.lifecycle", name = "lifecycle-runtime-ktx",version.ref = "lifecycle"}
-activity = {group = "androidx.activity", name = "activity-compose",version.ref = "activityCompose"}
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+lifecycler = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+activity = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-guava = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-guava", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
-
-compose-bom = {group = "androidx.compose",name = "compose-bom",version.ref = "bom"}
-compose-ui = {group = "androidx.compose.ui",name ="ui"}
-compose-graphics = {group = "androidx.compose.ui", name = "ui-graphics"}
-compose-preview = {group = "androidx.compose.ui", name = "ui-tooling-preview"}
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "bom" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 compose-material-iconsExtended = { group = "androidx.compose.material", name = "material-icons-extended" }
-compose-material3 = {group = "androidx.compose.material3", name = "material3"}
-compose-ui-tooling = {group = "androidx.compose.ui", name = "ui-tooling"}
-compose-ui-testing = {group = "androidx.compose.ui", name = "ui-test-junit4"}
-compose-ui-test-manifest = {group = "androidx.compose.ui",name = "ui-test-manifest"}
-compose-navigation = {group = "androidx.navigation", name = "navigation-compose",version.ref = "navigation"}
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose-ui-testing = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
 
 junit = {group = "junit", name = "junit",version.ref = "junit"}
 junit-ext = {group = "androidx.test.ext",name ="junit",version.ref ="junit-ext"}
@@ -66,6 +73,8 @@ compose = [
 
 
 [plugins]
-kotlin = {id = "org.jetbrains.kotlin.android",version.ref = "kotlin"}
-application = {id = "com.android.application",version.ref = "app"}
-library = {id = "com.android.library", version.ref = "app"}
+kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+application = { id = "com.android.application", version.ref = "app" }
+library = { id = "com.android.library", version.ref = "app" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

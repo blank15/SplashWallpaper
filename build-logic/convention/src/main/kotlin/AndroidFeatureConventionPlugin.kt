@@ -10,6 +10,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
         with(target) {
             pluginManager.apply {
                 apply("wallpaper.android.library")
+                apply("wallpaper.android.hilt")
             }
 
 
@@ -24,7 +25,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
 
                 add("implementation", libs.findLibrary("coil.kt").get())
                 add("implementation", libs.findLibrary("coil.kt.compose").get())
-                add("implementation",libs.findLibrary("compose.navigation").get())
+                add("implementation", libs.findLibrary("compose.navigation").get())
+                add("implementation", libs.findLibrary("androidx.hilt.navigation.compose").get())
                 add("implementation", libs.findLibrary("kotlinx.coroutines.android").get())
 
             }

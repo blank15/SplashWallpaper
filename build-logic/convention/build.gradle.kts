@@ -45,5 +45,9 @@ gradlePlugin {
             id = "wallpaper.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
+        register("androidHilt") {
+            id = "wallpaper.android.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
     }
 }

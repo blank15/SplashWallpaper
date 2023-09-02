@@ -1,6 +1,7 @@
 plugins {
     id("wallpaper.android.application")
     id("wallpaper.android.application.compose")
+    id("wallpaper.android.hilt")
 }
 
 android {
@@ -38,6 +39,7 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.bundles.compose)
     implementation(libs.compose.navigation)
+    implementation(libs.androidx.hilt.navigation.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.junit.ext)
     androidTestImplementation(libs.espresso)
