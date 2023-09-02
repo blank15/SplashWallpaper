@@ -21,8 +21,12 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
 
                 add("testImplementation", kotlin("test"))
                 add("androidTestImplementation", kotlin("test"))
-                add("implementation",libs.findLibrary("compose-navigation").get())
+
+                add("implementation", libs.findLibrary("coil.kt").get())
+                add("implementation", libs.findLibrary("coil.kt.compose").get())
+                add("implementation",libs.findLibrary("compose.navigation").get())
                 add("implementation", libs.findLibrary("kotlinx.coroutines.android").get())
+
             }
         }
     }

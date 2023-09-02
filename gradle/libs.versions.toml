@@ -20,6 +20,8 @@ material = "1.9.0"
 navigation = "2.6.0"
 kotlinxCoroutines = "1.6.4"
 
+coil = "2.2.2"
+
 [libraries]
 core-ktx = {group = "androidx.core",name = "core-ktx",version.ref = "core"}
 lifecycler = {group = "androidx.lifecycle", name = "lifecycle-runtime-ktx",version.ref = "lifecycle"}
@@ -49,6 +51,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "app" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 
+
+coil-kt = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+coil-kt-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 
 [bundles]
 compose = [
