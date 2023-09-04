@@ -1,6 +1,6 @@
 plugins {
     id("wallpaper.android.library")
-    id("wallpaper.android.hilt")
+    kotlin("kapt")
 }
 
 android {
@@ -8,4 +8,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.hilt.android)
+    implementation(libs.kotlinx.coroutines.android)
+    kapt(libs.hilt.compiler)
 }

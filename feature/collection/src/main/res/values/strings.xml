@@ -1,3 +1,4 @@
 <resources>
     <string name="collection_name">Collection</string>
+    <string name="no_collection">Belum ada Koleksi di Tambahkan</string>
 </resources>

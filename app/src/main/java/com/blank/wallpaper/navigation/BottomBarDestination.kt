@@ -8,9 +8,10 @@ import androidx.compose.material.icons.rounded.Collections
 import androidx.compose.material.icons.rounded.Home
 import androidx.compose.material.icons.rounded.Info
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.blank.home.R as homeRes
-import com.blank.collection.R as collectionRes
 import com.blank.about.R as aboutRes
+import com.blank.collection.R as collectionRes
+import com.blank.home.R as homeRes
+
 
 enum class BottomBarDestination(
     val selectedIcon: ImageVector,
@@ -20,7 +21,7 @@ enum class BottomBarDestination(
     HOME(
         selectedIcon = Icons.Rounded.Home,
         unselectedIcon = Icons.Outlined.Home,
-        titleTextId = homeRes.string.home_name
+        titleTextId = homeRes.string.home_name,
     ),
     COLLECTION(
         selectedIcon = Icons.Rounded.Collections,

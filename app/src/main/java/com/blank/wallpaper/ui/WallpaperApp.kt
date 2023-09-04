@@ -27,6 +27,7 @@ import com.blank.designsystem.theme.WallpaperTheme
 import com.blank.home.navigation.detailItemRouteScreen
 import com.blank.home.navigation.homeRoute
 import com.blank.home.navigation.homeScreen
+import com.blank.home.navigation.navigateToDetailItem
 import com.blank.home.navigation.navigateToHome
 import com.blank.wallpaper.navigation.BottomBarDestination
 
@@ -44,12 +45,20 @@ fun AppHost(
         modifier = modifier,
     ) {innerPadding ->
         NavHost(navController = navController, startDestination = homeRoute,
-            modifier= modifier.padding(innerPadding)){
+            modifier= modifier.padding(innerPadding)) {
 
-            homeScreen()
+            homeScreen(
+                navigateToDetail = {
+                    navController.navigateToDetailItem(
+                        it
+                    )
+                }
+            )
             collectionScreen()
             aboutScreen()
-            detailItemRouteScreen()
+            detailItemRouteScreen(
+                onBackPress = navController::popBackStack
+            )
 
         }
     }
@@ -65,7 +74,7 @@ private fun BottomBar(
 
     NavigationBar(modifier = modifier) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
-
+        val sufixPage = "_page"
         destination.forEach {item ->
             val isSelected = navBackStackEntry?.destination?.route?.contains(item.name,true) ?: false
             val name = stringResource(id = item.titleTextId)
@@ -74,13 +83,13 @@ private fun BottomBar(
                         if(isSelected){
                             Icon(
                                 imageVector = item.selectedIcon,
-                                contentDescription = name
+                                contentDescription = name + sufixPage
                             )
                         }else
                         {
                             Icon(
                                 imageVector = item.unselectedIcon,
-                                contentDescription = name
+                                contentDescription = name + sufixPage
                             )
                         }
                 },
