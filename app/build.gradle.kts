@@ -6,8 +6,16 @@ plugins {
 
 android {
     namespace = "com.blank.wallpaper"
+    defaultConfig {
+        applicationId = "com.blank.wallpaper"
+        versionCode = libs.versions.versionCode.get().toInt()
+        versionName = libs.versions.versionName.get()
+    }
 
     buildTypes {
+        debug {
+            applicationIdSuffix = ".debug"
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
