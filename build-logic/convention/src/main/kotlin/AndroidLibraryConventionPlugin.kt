@@ -14,9 +14,9 @@
  *   limitations under the License.
  */
 
-import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.gradle.LibraryExtension
 import com.blank.wallpaper.configureKotlinAndroid
+import com.blank.wallpaper.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -33,7 +33,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
 
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
-                defaultConfig.targetSdk = 34
+                defaultConfig.targetSdk = libs.findVersion("targetSdk").get().toString().toInt()
             }
             dependencies {
                 add("androidTestImplementation", kotlin("test"))

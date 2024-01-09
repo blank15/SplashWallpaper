@@ -10,7 +10,6 @@ android {
 
 dependencies {
 
-    implementation(project(":data"))
     implementation(libs.hilt.android)
     implementation(libs.kotlinx.coroutines.android)
     kapt(libs.hilt.compiler)

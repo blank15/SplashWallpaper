@@ -38,6 +38,7 @@ dependencies {
     implementation(project(":feature:collection"))
     implementation(project(":designsystem"))
     implementation(project(":ui"))
+    implementation(project(":data"))
 
 
     implementation(libs.core.ktx)

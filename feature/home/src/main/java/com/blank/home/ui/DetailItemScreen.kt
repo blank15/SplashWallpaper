@@ -85,10 +85,7 @@ fun DetailContent(
             .verticalScroll(rememberScrollState())
     ) {
         Box {
-            ImageComponent(url = detailData.fullImage,
-                onImageLoading = {
-                    onImageLoading()
-                })
+            ImageComponent(url = detailData.fullImage)
             Icon(
                 imageVector = Icons.Default.ArrowBack,
                 contentDescription = stringResource(R.string.back),
@@ -107,9 +104,6 @@ fun DetailContent(
                     modifier = Modifier
                         .clip(CircleShape)
                         .size(20.dp),
-                    onImageLoading = {
-                        onImageLoading()
-                    }
                 )
                 Text(
                     text = detailData.profileUser.name,

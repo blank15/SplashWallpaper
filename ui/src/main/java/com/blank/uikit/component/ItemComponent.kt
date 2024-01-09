@@ -46,23 +46,21 @@ fun ItemComponent(imageData: ImageData, modifier: Modifier = Modifier) {
             .background(color = Color.White, shape),
         contentAlignment = Alignment.BottomStart
     ) {
-        ImageComponent(url = imageData.thumb,
+        ImageComponent(
+            url = imageData.thumb,
             modifier = Modifier
                 .clip(shape),
-            onImageLoading = {
-                onImageLoading()
-            })
+        )
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(start = 8.dp)
         ) {
-            ImageComponent(url = imageData.profileUser.imgProfile,
+            ImageComponent(
+                url = imageData.profileUser.imgProfile,
                 modifier = Modifier
                     .clip(CircleShape)
                     .size(18.dp),
-                onImageLoading = {
-                    onImageLoading()
-                })
+            )
             Text(
                 text = imageData.profileUser.name,
                 fontSize = 10.sp,

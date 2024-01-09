@@ -1,11 +1,9 @@
 package com.blank.domain.usecase
 
 import com.blank.domain.model.ImageData
-import com.blank.domain.model.ProfileUser
-import com.data.model.ImageResponse
-import com.data.repository.WallpaperRepository
+import com.blank.domain.repository.WallpaperRepository
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOf
 import javax.inject.Inject
 
 class GetWallpaperContentUseCase @Inject constructor(
@@ -13,21 +11,7 @@ class GetWallpaperContentUseCase @Inject constructor(
 ) {
 
     operator fun invoke(): Flow<List<ImageData>> {
-        return wallpaperRepository.getWallpaperData().mapToDomainModel()
+        return flowOf(wallpaperRepository.getWallpaperData())
     }
 
-    private fun List<ImageResponse>.mapToDomainModel(): Flow<List<ImageData>> = flow {
-        val listImageData = map {
-            ImageData(
-                it.id, it.thumb, it.fullImage, it.description, it.totalLike,
-                ProfileUser(
-                    it.profileUser.name,
-                    it.profileUser.location,
-                    it.profileUser.imgProfile,
-                    it.profileUser.bio
-                )
-            )
-        }
-        emit(listImageData)
-    }
 }
